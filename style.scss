@@ -5,31 +5,30 @@ body{
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
     padding: 0px;
+    width: 100vw;
+    height: 100vh;
    
 }
 .space{
     margin-left: 100px;
     margin-right: 100px;
 }
-// header
+
 .top-header{
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
-    // border: 1px solid red;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // margin-top: 20px;
-    // margin-bottom: 20px;
+
     .logo{
         margin-left: 80px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 20px;
-        // border: 1px solid red;
-        
+
         .title{
           color:#333333;
           font-weight: bold;
@@ -47,7 +46,6 @@ body{
             display: none;
         }
         section{
-            // border: 1px solid red;
             display: flex;
             flex-direction: column;
            justify-content: center;
@@ -72,7 +70,9 @@ body{
     background-color: black;
     width: 100%;
     z-index: 3;
-    overflow: hidden;
+    .user-register{
+        display: none;
+    }
     .link{
         display: flex;
         flex-direction: row;
@@ -100,18 +100,17 @@ a{
 
 .slideshow-container {
    
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     position: relative;
     margin: auto;
-   
   }
-  
+
   /* Hide the images by default */
   .mySlides {
     display: none;
-    // border: 1px solid red;
     text-align: center;
+   
   }
   
   /* Next & previous buttons */
@@ -272,8 +271,7 @@ a{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
-        
+        padding: 20px;        
         cursor: pointer;
         background-color: #7084a9 ;
         .fa-rotate {
@@ -301,6 +299,7 @@ a{
     }
 }
 article{
+    
     display: none;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -308,9 +307,7 @@ article{
     position: relative;
     overflow: hidden;;
     animation: rotateMenu 1s ease-in-out forwards;
-   
-    
-    
+ 
     .bottom-article{
         
         display: flex;
@@ -367,8 +364,17 @@ footer{
 //    border: 1px solid red;
 }
 @media  (max-width: 700px) {
+  
     .top-header{
-        
+        overflow: auto;
+        // position: fixed !important ;
+        // width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2222;
+        background-color: white;
+        width: 100vw;
         .logo{
             margin-left: 20px;
         }
@@ -393,8 +399,36 @@ footer{
         }
     }
   
+    
     .navbar{
         display: none;
+        width: 100%;
+        height: 100%;
+       
+            .user-register{
+                display: flex ;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 50px;
+                gap: 20px;
+                
+                section{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    
+                    span{
+                        color: #555555;
+                    }
+                    a{
+                        color: #7084a9;
+                    }
+                }
+            }
+        
         .link{
             padding-top: 20px;
             display: flex;
@@ -405,6 +439,7 @@ footer{
             }
         }
     }
+    
     .space{
         margin-left: 20px;
         margin-right: 20px;

@@ -16,18 +16,16 @@ function openMenu() {
 
   window.onscroll = function() {myFunction()};
 
-var navbar = document.querySelector(".navbar");
-var sticky = navbar.offsetTop;
+ let navbar = document.querySelector(".navbar");
+ let sticky = navbar.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
+ function myFunction() {
+   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
   }
 }
-
-
 
 //   slideshow-container
 
@@ -63,6 +61,9 @@ function showSlides(n) {
 
 
 // open section main
+
+
+
 
 function openArticle() {
     let nav = document.querySelector(".article");
@@ -112,3 +113,4 @@ function openArticle() {
 
     }
   }
+ 

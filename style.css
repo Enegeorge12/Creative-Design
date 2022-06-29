@@ -7,6 +7,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0px;
   padding: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .space {
@@ -107,7 +109,10 @@ body {
   background-color: black;
   width: 100%;
   z-index: 3;
-  overflow: hidden;
+}
+
+.navbar .user-register {
+  display: none;
 }
 
 .navbar .link {
@@ -143,7 +148,7 @@ a {
 }
 
 .slideshow-container {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   position: relative;
   margin: auto;
@@ -539,6 +544,15 @@ footer {
 }
 
 @media (max-width: 700px) {
+  .top-header {
+    overflow: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2222;
+    background-color: white;
+    width: 100vw;
+  }
   .top-header .logo {
     margin-left: 20px;
   }
@@ -568,6 +582,46 @@ footer {
   }
   .navbar {
     display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .navbar .user-register {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+  .navbar .user-register section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .user-register section span {
+    color: #555555;
+  }
+  .navbar .user-register section a {
+    color: #7084a9;
   }
   .navbar .link {
     padding-top: 20px;
