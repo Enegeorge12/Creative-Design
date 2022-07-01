@@ -1,14 +1,9 @@
+@import "typography";
+
 *{
     box-sizing: border-box;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
-    margin: 0px;
-    padding: 0px;
-    width: 100vw;
-    height: 100vh;
-   
-}
+
 .space{
     margin-left: 100px;
     margin-right: 100px;
@@ -120,7 +115,7 @@ a{
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
+    padding: 30px;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -140,7 +135,7 @@ a{
   /* Caption text */
   .text {
     color: #f2f2f2;
-    font-size: 15px;
+    font-size: 16px;
     padding: 8px 12px;
     position: absolute;
     bottom:200px;
@@ -287,17 +282,7 @@ a{
     }
 }
 }
-@keyframes rotateMenu {
-    0% {
-        transform: rotateX(-90deg)
-    }
-    70% {
-        transform: rotateX(20deg) 
-    }
-    100% {
-        transform: rotateX(0deg) 
-    }
-}
+
 article{
     
     display: none;
@@ -307,7 +292,18 @@ article{
     position: relative;
     overflow: hidden;;
     animation: rotateMenu 1s ease-in-out forwards;
- 
+
+    @keyframes rotateMenu {
+        0% {
+            transform: rotateX(-90deg)
+        }
+        70% {
+            transform: rotateX(20deg) 
+        }
+        100% {
+            transform: rotateX(0deg) 
+        }
+    }
     .bottom-article{
         
         display: flex;
